@@ -97,8 +97,7 @@ footer a{color:var(--g1)}
    GitHub / file locali: lascia WEBAPP_URL vuoto.
    Google Apps Script: incolla l'URL della web app (…/exec). */
 const WEBAPP_URL = "";
-function setLinks(u){document.querySelectorAll('.switch a').forEach(a=>{const p=a.dataset.page;a.href=u?u+'?page='+p:(p==='regole'?'Ripasso-prima-regole_ESSENTIALS_IIS_MENDEL_INLGLSE.html':'Ripasso-prima-esercizi_IIS_MENDEL_INGLESE.html
-');});}
+function setLinks(u){document.querySelectorAll('.switch a').forEach(a=>{const p=a.dataset.page;a.href=u?u+'?page='+p:(p==='regole'?'Ripasso-prima-regole_ESSENTIALS_IIS_MENDEL_INLGLSE.html':'Ripasso-prima-esercizi_IIS_MENDEL_INGLESE.html');});}');});}
 setLinks(WEBAPP_URL);
 if(!WEBAPP_URL && window.google && google.script && google.script.run){google.script.run.withSuccessHandler(setLinks).getUrl();}
 function openTab(k){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.t===k));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===k));}
